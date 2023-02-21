@@ -7,21 +7,35 @@ function startGame(){
     msgArea.innerHTML = "";
     msgArea.classList.add("hidden");
 
-    var rand = Math.floor(Math.random() * 6000);
+    var rand = Math.floor(Math.random() * 8000);
     setInterval(addfishLeft, rand);
+    setInterval(addfishRight, rand);
 }
 
 function addfishLeft(){
-    var arr = ["fish_4", "fish_5", "seahorse", "fish_4", "stingray"];
+    var arr = ["fish_4", "fish_5", "seahorse", "fish_4", "stingray", "fish_7", "octopus"];
 
     const fishLeft = document.createElement("div");
     fishLeft.classList.add(arr[Math.floor(Math.random() * arr.length)]);
     fishLeft.style.position = "absolute";
     fishLeft.style.left = "-200px";
-    fishLeft.style.top = Math.floor(Math.random() * 550) + "px";
+    fishLeft.style.top = Math.floor(Math.random() * (600 - 150 + 1)) + 100 + "px";
     fishLeft.appendChild(document.createElement("div"));
 
     gameArea.appendChild(fishLeft);
+}
+
+function addfishRight(){
+    var arr = ["fish_1", "fish_2", "fish_3", "fish_6", "fish_8", "turtle", "fish_1"];
+
+    const fishRight = document.createElement("div");
+    fishRight.classList.add(arr[Math.floor(Math.random() * arr.length)]);
+    fishRight.style.position = "absolute";
+    fishRight.style.left = "1200px";
+    fishRight.style.top = Math.floor(Math.random() *  (500 - 450 + 1)) + 450 + "px";
+    fishRight.appendChild(document.createElement("div"));
+
+    gameArea.appendChild(fishRight);
 }
 
 function updateScore(){
