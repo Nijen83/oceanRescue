@@ -10,6 +10,7 @@ function startGame(){
     var rand = Math.floor(Math.random() * 8000);
     setInterval(addfishLeft, rand);
     setInterval(addfishRight, rand);
+    setInterval(addTrash, rand);
 }
 
 function addfishLeft(){
@@ -36,6 +37,19 @@ function addfishRight(){
     fishRight.appendChild(document.createElement("div"));
 
     gameArea.appendChild(fishRight);
+}
+
+function addTrash(){
+    var arr = ["trash_1", "trash_2", "trash_3", "trash_4", "trash_5", "trash_6"];
+
+    const trash = document.createElement("div");
+    trash.classList.add(arr[Math.floor(Math.random() * arr.length)]);
+    trash.style.position = "absolute";
+    trash.style.left = Math.floor(Math.random() *  1200) + "px";
+    trash.style.top = "-100px";
+    trash.appendChild(document.createElement("div"));
+
+    gameArea.appendChild(trash);
 }
 
 function updateScore(){

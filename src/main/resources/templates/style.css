@@ -36,16 +36,17 @@ h1 {
 }
 
 #message-area {
-    position: fixed;
-    top: 300px;
-    left: 475px;
+    position: absolute;
     z-index: 1000;
-    background-color: #023A5D;
+    background-color: white;
     border: #034381 5px solid;
-    border-radius: 99999px;
     text-shadow: 2px 2px 5px black;
     box-shadow: inset 2px 2px 10px black;
-    }
+    top: 100px;
+    left: 40px;
+    width: 1200px;
+    height: 800px;
+}
 
 .hidden {
     display: none;
@@ -59,6 +60,7 @@ h1 {
     animation: right 20s normal;
     background-repeat: no-repeat;
 }
+
 .fish_2 {
     background-image: url("images/fish/fish_2_r.gif");
     background-size: cover;
@@ -144,7 +146,6 @@ h1 {
     width: 200px;
     animation: left 40s normal;
     transform: rotate(30deg);
-
 }
 
 .turtle {
@@ -163,19 +164,72 @@ h1 {
     width: 80px;
     bottom: 70px;
     position:absolute;
-    left: 300px;
+    left: 250px;
 }
+
 .coral_2 {
     background-image: url("images/plants/coral_2.png");
     background-size: cover;
     height: 120px;
     width: 120px;
-    bottom: 70px;
+    bottom: 100px;
     position:absolute;
-    left: 500px;
+    left: 600px;
 }
 
+.coral_3 {
+    background-image: url("images/plants/coral_3.png");
+    background-size: cover;
+    height: 120px;
+    width: 120px;
+    bottom: 0px;
+    position:absolute;
+    left: 800px;
+    z-index: 900;
+}
 
+.trash_1 {
+    background-image: url("images/trash/beer_bottle.png");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    animation: trash 30s normal;
+}
+.trash_2 {
+    background-image: url("images/trash/beverage_can_empty.png");
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    animation: trash 30s normal;
+}
+.trash_3 {
+    background-image: url("images/trash/bottle.png");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    animation: trash 30s normal;
+}
+.trash_4 {
+    background-image: url("images/trash/can.png");
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    animation: trash 30s normal;
+}
+.trash_5 {
+    background-image: url("images/trash/plastic_bag.png");
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    animation: trash 30s normal;
+}
+.trash_6 {
+    background-image: url("images/trash/plastic_rings.png");
+    background-size: cover;
+    height: 75px;
+    width: 75px;
+    animation: trash 30s normal;
+}
 
 @keyframes left {
     from {
@@ -185,6 +239,7 @@ h1 {
         margin-left:1500px;
     }
 }
+
 @keyframes right {
     from {
         margin-left:1600px;
@@ -193,6 +248,37 @@ h1 {
         margin-left:-2000px;
     }
 }
+
+@keyframes trashTurnRight {
+    from {
+        margin-top:0px;
+    }
+    to {
+        margin-top:900px;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes trash {
+    from {
+        margin-top:0px;
+    }
+    to {
+        margin-top:900px;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes trashTurnLeft {
+    from {
+        margin-top:0px;
+    }
+    to {
+        margin-top:900px;
+        transform: rotate(-360deg);
+    }
+}
+
 
 
 
