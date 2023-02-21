@@ -2,6 +2,9 @@ const msgArea = document.querySelector("#message-area");
 const gameArea = document.querySelector("#game-area");
 const title = document.querySelector("h1");
 
+// For health bar
+let health = document.getElementByID("health");
+// Update health bar by inserting "health.value = (value)" in the functions
 
 function startGame(){
     msgArea.innerHTML = "";
@@ -41,3 +44,5 @@ function addfishRight(){
 function updateScore(){
     title.innerHTML = "Alien Shooter<span>Score: " + score + "</span>";
 }
+
+
