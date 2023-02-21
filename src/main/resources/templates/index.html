@@ -10,7 +10,14 @@
     <h1>Ocean Rescue</h1>
 </header>
 <section>
-    <div id="message-area" style="color: white;" ><h2 onclick="startGame()">START!</h2></div>
+    <div id="message-area" style="color: white;" >
+        <h2 onclick="startGame()">START!</h2>
+        <H2><div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>RULES!</strong>
+            Indicates a dangerous or potentially negative action.
+        </div></H2>
+    </div>
     <div id="game-area">
         <div class="crab"></div>
         <div class="coral_2"></div>
