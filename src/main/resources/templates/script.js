@@ -68,21 +68,19 @@ function addTrash(){
     gameArea.appendChild(trash);
 
     trash.addEventListener('click', (event)=> {
-       let elementClass = event.target.className;
        event.target.remove();
-       console.log(elementClass);
 
-       if (elementClass == "trash_5" || elementClass == "trash_6") {
-       score += 10;
-       } else {
-       score += 25;
-       }
-       updateScore();
-    });
+        if (trash.getAttribute('class') === "trash_5" || trash.getAttribute('class') === "trash_6") {
+            score += 10;
+            } else {
+            score += 25;
+            }
+            updateScore();
+        });
 }
 
 function updateScore(){
-    title.innerHTML = "Ocean Rescue!<span>Score: " + score + "</span>";
+    title.innerHTML = "<span>Score: " + score + "</span>";
 }
 
 
