@@ -165,7 +165,7 @@ h1 {
     background-size: cover;
     height: 80px;
     width: 80px;
-    bottom: 70px;
+    bottom: 100px;
     position:absolute;
     left: 300px;
 }
@@ -176,10 +176,17 @@ h1 {
     width: 120px;
     bottom: 70px;
     position:absolute;
-    left: 500px;
+    left: 575px;
 }
-
-
+.coral_3 {
+    background-image: url("images/plants/coral_3.png");
+    background-size: cover;
+    height: 120px;
+    width: 120px;
+    bottom: 0px;
+    position:absolute;
+    left: 800px;
+}
 
 @keyframes left {
     from {
