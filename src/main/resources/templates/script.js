@@ -16,6 +16,16 @@ function startGame(){
     setInterval(addTrash, rand);
 }
 
+function showRules(){
+    const rules = document.createElement("div");
+    const closebtn = document.createElement("div");
+    rules.classList.add("closebtn")
+    rules.classList.add("rules");
+
+
+    gameArea.appendChild(rules, closebtn);
+}
+
 function addfishLeft(){
     var arr = ["fish_4", "fish_5", "seahorse", "fish_4", "stingray", "fish_7", "octopus"];
 
