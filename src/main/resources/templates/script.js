@@ -1,6 +1,7 @@
 const msgArea = document.querySelector("#message-area");
 const gameArea = document.querySelector("#game-area");
 const title = document.querySelector("h1");
+const rules = document.querySelector(".rules");
 
 // For health bar
 let health = document.getElementByID("health");
@@ -17,13 +18,7 @@ function startGame(){
 }
 
 function showRules(){
-    const rules = document.createElement("div");
-    const closebtn = document.createElement("div");
-    rules.classList.add("closebtn")
-    rules.classList.add("rules");
-
-
-    gameArea.appendChild(rules, closebtn);
+    rules.style.display = "block";
 }
 
 function addfishLeft(){
@@ -66,7 +61,6 @@ function addTrash(){
 
     trash.addEventListener('click', (event)=> {
         event.target.remove();
-        target.innerHTML = "20p";
     });
 }
 
