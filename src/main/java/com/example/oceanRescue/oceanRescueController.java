@@ -8,6 +8,6 @@ public class oceanRescueController {
 
     @GetMapping("/")
     public String goToGame() {
-        return "index";
+        return "home";
     }
 }
