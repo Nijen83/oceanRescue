@@ -2,6 +2,8 @@ const msgArea = document.querySelector("#message-area");
 const gameArea = document.querySelector("#game-area");
 const title = document.querySelector("h1");
 const rules = document.querySelector(".rules");
+const scoreboard = document.querySelector(".scoreboard");
+let score = 0;
 
 // For health bar
 let health = document.getElementByID("health");
@@ -15,10 +17,16 @@ function startGame(){
     setInterval(addfishLeft, rand);
     setInterval(addfishRight, rand);
     setInterval(addTrash, rand);
+    updateScore();
+
 }
 
 function showRules(){
     rules.style.display = "block";
+}
+
+function showScoreboard() {
+    scoreboard.style.display = "block";
 }
 
 function addfishLeft(){
@@ -60,12 +68,21 @@ function addTrash(){
     gameArea.appendChild(trash);
 
     trash.addEventListener('click', (event)=> {
-        event.target.remove();
+       let elementClass = event.target.className;
+       event.target.remove();
+       console.log(elementClass);
+
+       if (elementClass == "trash_5" || elementClass == "trash_6") {
+       score += 10;
+       } else {
+       score += 25;
+       }
+       updateScore();
     });
 }
 
 function updateScore(){
-    title.innerHTML = "Alien Shooter<span>Score: " + score + "</span>";
+    title.innerHTML = "Ocean Rescue!<span>Score: " + score + "</span>";
 }
 
 
