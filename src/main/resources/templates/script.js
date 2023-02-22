@@ -53,6 +53,11 @@ function addTrash(){
     trash.appendChild(document.createElement("div"));
 
     gameArea.appendChild(trash);
+
+    trash.addEventListener('click', (event)=> {
+        event.target.remove();
+        target.innerHTML = "20p";
+    });
 }
 
 function updateScore(){

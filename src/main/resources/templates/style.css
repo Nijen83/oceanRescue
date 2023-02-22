@@ -188,6 +188,55 @@ h1 {
     left: 800px;
 }
 
+.trash_1 div{
+    background-image: url("images/trash/beer_bottle.png");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    animation: trash 30s normal;
+}
+
+.trash_2 div{
+    background-image: url("images/trash/beverage_can_empty.png");
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    animation: trash 30s normal;
+}
+
+.trash_3 div{
+    background-image: url("images/trash/bottle.png");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    animation: trash 30s normal;
+}
+
+.trash_4 div{
+    background-image: url("images/trash/can.png");
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    animation: trash 30s normal;
+}
+
+.trash_5 div{
+    background-image: url("images/trash/plastic_bag.png");
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    animation: trash 30s normal;
+}
+
+.trash_6 div{
+    background-image: url("images/trash/plastic_rings.png");
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    animation: trash 30s normal;
+}
+
+
 @keyframes left {
     from {
         margin-left:-200px;
@@ -202,6 +251,15 @@ h1 {
     }
     to {
         margin-left:-2000px;
+    }
+}
+
+@keyframes trash {
+    from {
+        margin-top:-200px;
+    }
+    to {
+        margin-top:1000px;
     }
 }
 
