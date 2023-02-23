@@ -281,7 +281,7 @@ h1 {
     background-size: cover;
     height: 40px;
     width: 40px;
-    animation: trash 40s normal;
+    animation: rotationR 40s normal;
 }
 
 .trash_5{
@@ -289,7 +289,7 @@ h1 {
     background-size: cover;
     height: 100px;
     width: 100px;
-    animation: trash 40s normal;
+    animation: rotationL 40s normal;
 }
 
 .trash_6{
@@ -341,6 +341,28 @@ h1 {
     to {
         margin-top:1000px;
     }
+}
+
+@keyframes rotationR {
+  from {
+    margin-top:-200px;
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+    margin-top:1000px;
+  }
+}
+
+@keyframes rotationL {
+  from {
+    margin-top:-200px;
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+    margin-top:1000px;
+  }
 }
 
 #health {
