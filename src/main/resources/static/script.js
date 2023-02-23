@@ -16,16 +16,26 @@ function startGame(){
     msgArea.innerHTML = "";
     msgArea.classList.add("hidden");
 
-    setInterval(collide, 1);
     var rand = Math.floor(Math.random() * 8000);
     setInterval(addfishLeft, rand);
     setInterval(addfishRight, rand);
-    setInterval(addTrash, 10000);
+    setInterval(addTrash, 8000);
     updateScore();
+    changeBackground();
 }
 
 function showRules(){
     rules.style.display = "block";
+}
+
+function changeBackground(){
+
+    if(healthCount <= 5){
+        gameArea.style.backgroundImage = "url('images/background_plastic.jpeg')";
+    } else {
+        gameArea.style.backgroundImage = "url('images/background.jpeg')";
+    }
+
 }
 
 function showScoreboard() {
@@ -48,6 +58,7 @@ function addfishLeft(){
         event.target.remove();
         healthCount--;
         updateScore();
+        changeBackground();
     });
 }
 
@@ -67,6 +78,7 @@ function addfishRight(){
         event.target.remove();
         healthCount--;
         updateScore();
+        changeBackground();
     });
 }
 
@@ -93,66 +105,8 @@ function addTrash(){
             score += 25;
         }
         updateScore();
+        changeBackground();
     });
-}
-
-function collide() {
-
-    let trash1 = document.GetElementByClassName("trash_1").getBoundingClientRect();
-
-    let fish1 = document.GetElementByClassName("fish_1").getBoundingClientRect();
-    let fish2 = document.GetElementByClassName("fish_2").getBoundingClientRect();
-    let fish3 = document.GetElementByClassName("fish_3").getBoundingClientRect();
-    let fish4 = document.GetElementByClassName("fish_4").getBoundingClientRect();
-    let fish5 = document.GetElementByClassName("fish_5").getBoundingClientRect();
-    let fish6 = document.GetElementByClassName("fish_6").getBoundingClientRect();
-    let fish7 = document.GetElementByClassName("fish_7").getBoundingClientRect();
-    let fish8 = document.GetElementByClassName("fish_8").getBoundingClientRect();
-
-     if (trash1.left < fish1.left + fish1.width  && trash1.left + trash1.width  > fish1.left &&
-     trash1.top < fish1.top + fish1.height && trash1.top + trash1.height > fish1.top) {
-        score ++;
-        updateScore;
-     }
-
-     if (trash1.left < fish2.left + fish2.width  && trash1.left + trash1.width  > fish2.left &&
-     trash1.top < fish2.top + fish2.height && trash1.top + trash1.height > fish2.top) {
-        score ++;
-        updateScore;
-     }
-
-     if (trash1.left < fish3.left + fish3.width  && trash1.left + trash1.width  > fish3.left &&
-     trash1.top < fish3.top + fish3.height && trash1.top + trash1.height > fish3.top) {
-        score ++;
-        updateScore;
-     }
-
-     if (trash1.left < fish4.left + fish4.width  && trash1.left + trash1.width  > fish4.left &&
-     trash1.top < fish4.top + fish4.height && trash1.top + trash1.height > fish4.top) {
-        score ++;
-        updateScore;
-     }
-
-     if (trash1.left < fish5.left + fish5.width  && trash1.left + trash1.width  > fish5.left &&
-     trash1.top < fish5.top + fish5.height && trash1.top + trash1.height > fish5.top) {
-        score ++;
-        updateScore;
-     }
-     if (trash1.left < fish6.left + fish6.width  && trash1.left + trash1.width  > fish6.left &&
-     trash1.top < fish6.top + fish6.height && trash1.top + trash1.height > fish6.top) {
-        score ++;
-        updateScore;
-     }
-     if (trash1.left < fish7.left + fish7.width  && trash1.left + trash1.width  > fish7.left &&
-     trash1.top < fish7.top + fish7.height && trash1.top + trash1.height > fish7.top) {
-        score ++;
-        updateScore;
-     }
-     if (trash1.left < fish8.left + fish8.width  && trash1.left + trash1.width  > fish8.left &&
-     trash1.top < fish8.top + fish8.height && trash1.top + trash1.height > fish8.top) {
-        score ++;
-        updateScore;
-     }
 }
 
 function updateScore(){

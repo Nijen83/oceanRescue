@@ -1,7 +1,6 @@
 body {
-    background-color: black;
+    background-color: darkgray;
     cursor: url(fishing-net.svg), auto;
-    margin: -50px 0 0 -50px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -25,18 +24,8 @@ h1 {
     width: 960px;
 }
 
-h2 {
-justify-content: center;
-margin-top: 25px;
-}
-
-#start {
-justify-content: center;
-margin-top: 250px;
-}
 #game-area {
     position: absolute;
-    margin: -50px -350px 50px 330px;
     top: 100px;
     left: 40px;
     width: 1200px;
@@ -44,7 +33,6 @@ margin-top: 250px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("images/background.jpeg");
     background-size: cover;
     cursor: pointer;
     box-shadow: inset 2px 2px 10px black;
@@ -53,7 +41,6 @@ margin-top: 250px;
 
 #message-area {
     position: absolute;
-    margin: -50px -350px 50px 330px;
     top: 100px;
     left: 40px;
     width: 1200px;
@@ -63,9 +50,8 @@ margin-top: 250px;
     background-image: url("images/logo.png");
     background-size: cover;
     text-shadow: 2px 2px 5px black;
-    cursor: pointer;
-    cursor-color: black;
-    }
+    cursor: url("images/fishing-net.png");
+}
 
 .rules {
     position: absolute;
@@ -185,8 +171,6 @@ margin-top: 250px;
     height: 110px;
     width: 130px;
     animation: right 30s normal;
-        position: absolute;
-
 }
 
 .seahorse {
@@ -196,8 +180,6 @@ margin-top: 250px;
     width: 60px;
     animation: left 40s normal;
     transform: rotate(30deg);
-        position: absolute;
-
 }
 
 .stingray {
@@ -207,8 +189,6 @@ margin-top: 250px;
     width: 150px;
     transform: rotate(-30deg);
     animation: left 22s normal;
-        position: absolute;
-
 }
 
 .octopus {
@@ -218,9 +198,6 @@ margin-top: 250px;
     width: 200px;
     animation: left 40s normal;
     transform: rotate(30deg);
-        position: absolute;
-
-
 }
 
 .turtle {
@@ -230,8 +207,6 @@ margin-top: 250px;
     width: 150px;
     animation: right 30s normal;
     transform: rotate(60deg);
-        position: absolute;
-
 }
 
 .crab {
@@ -242,9 +217,8 @@ margin-top: 250px;
     bottom: 100px;
     position:absolute;
     left: 300px;
-        position: absolute;
-
 }
+
 .coral_2 {
     background-image: url("images/plants/coral_2.png");
     background-size: cover;
@@ -254,6 +228,7 @@ margin-top: 250px;
     position:absolute;
     left: 575px;
 }
+
 .coral_3 {
     background-image: url("images/plants/coral_3.png");
     background-size: cover;
@@ -310,7 +285,7 @@ margin-top: 250px;
     background-size: cover;
     height: 80px;
     width: 80px;
-    animation: trash 40s normal;
+    animation: rotationR 40s normal;
 }
 
 .trash_7{
@@ -318,7 +293,7 @@ margin-top: 250px;
     background-size: cover;
     height: 30px;
     width: 30px;
-    animation: trash 40s normal;
+    animation: rotationL 40s normal;
 }
 
 .trash_8{
