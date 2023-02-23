@@ -33,7 +33,6 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("images/background.jpeg");
     background-size: cover;
     cursor: pointer;
     box-shadow: inset 2px 2px 10px black;
@@ -52,7 +51,7 @@ h1 {
     background-size: cover;
     text-shadow: 2px 2px 5px black;
     cursor: url("images/fishing-net.png");
-    }
+}
 
 .rules {
     position: absolute;
