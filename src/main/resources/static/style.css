@@ -300,6 +300,22 @@ h1 {
     animation: trash 40s normal;
 }
 
+.trash_7{
+    background-image: url("images/trash/cigarette.png");
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    animation: trash 40s normal;
+}
+
+.trash_8{
+    background-image: url("images/trash/straw.png");
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    animation: trash 40s normal;
+}
+
 
 @keyframes left {
     from {

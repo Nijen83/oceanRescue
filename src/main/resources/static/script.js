@@ -20,7 +20,7 @@ function startGame(){
     var rand = Math.floor(Math.random() * 8000);
     setInterval(addfishLeft, rand);
     setInterval(addfishRight, rand);
-    setInterval(addTrash, rand);
+    setInterval(addTrash, 10000);
     updateScore();
 }
 
@@ -71,7 +71,7 @@ function addfishRight(){
 }
 
 function addTrash(){
-    var arr = ["trash_1", "trash_2", "trash_3", "trash_4", "trash_5", "trash_6"];
+    var arr = ["trash_1", "trash_2", "trash_3", "trash_4", "trash_5", "trash_6", "trash_7", "trash_8"];
 
     const trash = document.createElement("div");
     trash.classList.add(arr[Math.floor(Math.random() * arr.length)]);
@@ -87,6 +87,8 @@ function addTrash(){
 
         if(trash.getAttribute('class') === "trash_5" || trash.getAttribute('class') === "trash_6") {
             score += 10;
+        } else if(trash.getAttribute('class') === "trash_7" || trash.getAttribute('class') === "trash_8") {
+            score += 50;
         } else {
             score += 25;
         }
