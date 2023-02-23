@@ -172,8 +172,6 @@ h1 {
     height: 110px;
     width: 130px;
     animation: right 30s normal;
-        position: absolute;
-
 }
 
 .seahorse {
@@ -183,8 +181,6 @@ h1 {
     width: 60px;
     animation: left 40s normal;
     transform: rotate(30deg);
-        position: absolute;
-
 }
 
 .stingray {
@@ -194,8 +190,6 @@ h1 {
     width: 150px;
     transform: rotate(-30deg);
     animation: left 22s normal;
-        position: absolute;
-
 }
 
 .octopus {
@@ -205,9 +199,6 @@ h1 {
     width: 200px;
     animation: left 40s normal;
     transform: rotate(30deg);
-        position: absolute;
-
-
 }
 
 .turtle {
@@ -217,8 +208,6 @@ h1 {
     width: 150px;
     animation: right 30s normal;
     transform: rotate(60deg);
-        position: absolute;
-
 }
 
 .crab {
@@ -229,9 +218,8 @@ h1 {
     bottom: 100px;
     position:absolute;
     left: 300px;
-        position: absolute;
-
 }
+
 .coral_2 {
     background-image: url("images/plants/coral_2.png");
     background-size: cover;
@@ -241,6 +229,7 @@ h1 {
     position:absolute;
     left: 575px;
 }
+
 .coral_3 {
     background-image: url("images/plants/coral_3.png");
     background-size: cover;
@@ -297,7 +286,7 @@ h1 {
     background-size: cover;
     height: 80px;
     width: 80px;
-    animation: trash 40s normal;
+    animation: rotationR 40s normal;
 }
 
 .trash_7{
@@ -305,7 +294,7 @@ h1 {
     background-size: cover;
     height: 30px;
     width: 30px;
-    animation: trash 40s normal;
+    animation: rotationL 40s normal;
 }
 
 .trash_8{

@@ -20,7 +20,7 @@ function startGame(){
     var rand = Math.floor(Math.random() * 8000);
     setInterval(addfishLeft, rand);
     setInterval(addfishRight, rand);
-    setInterval(addTrash, 10000);
+    setInterval(addTrash, 8000);
     updateScore();
 }
 
