@@ -7,8 +7,8 @@
 </head>
 <body>
 <section>
-    <div id="message-area" style="color: white;" >
-        <h2 onclick="startGame()">START!</h2>
+    <div id="message-area" style="color: white; justify-content: center;" >
+        <h2 id="start" onclick="startGame()">START!</h2>
         <h2 onclick="showRules()">Show Rules</h2>
         <h2 onclick="showScoreboard()">Show Scoreboard</h2>
         <div class="rules">
@@ -18,7 +18,7 @@
             <span class="closebtn" onclick="this.parentElement.style.display='none';">X</span>
         </div>
     </div>
-    <div id="game-area">
+    <div id="game-area" style="color: white; justify-content: center;">
         <h1></h1>
         <div class="crab"></div>
         <div class="coral_2"></div>
