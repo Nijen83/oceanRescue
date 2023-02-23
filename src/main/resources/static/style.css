@@ -255,8 +255,8 @@ h1 {
     background-image: url("images/trash/beer_bottle.png");
     background-size: cover;
     position: absolute;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     animation: trash 40s normal;
 }
 
@@ -271,8 +271,8 @@ h1 {
 .trash_3{
     background-image: url("images/trash/bottle.png");
     background-size: cover;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     animation: trash 40s normal;
 }
 
