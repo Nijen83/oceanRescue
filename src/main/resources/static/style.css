@@ -1,5 +1,5 @@
 body {
-    background-color: darkgray;
+    background-color: black;
     cursor: url(fishing-net.svg), auto;
 }
 
@@ -22,10 +22,22 @@ h1 {
     padding-right:30px;
     padding-left:30px;
     width: 960px;
+
+}
+
+h2 {
+justify-content: center;
+margin-top: 25px;
+}
+
+#start {
+justify-content: center;
+margin-top: 250px;
 }
 
 #game-area {
     position: absolute;
+    margin: -50px -350px 50px 330px;
     top: 100px;
     left: 40px;
     width: 1200px;
@@ -41,6 +53,7 @@ h1 {
 
 #message-area {
     position: absolute;
+    margin: -50px -350px 50px 330px;
     top: 100px;
     left: 40px;
     width: 1200px;
@@ -50,7 +63,7 @@ h1 {
     background-image: url("images/logo.png");
     background-size: cover;
     text-shadow: 2px 2px 5px black;
-    cursor: url("images/fishing-net.png");
+    cursor: pointer;
 }
 
 .rules {
