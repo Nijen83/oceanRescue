@@ -10,6 +10,7 @@ const bottomImage = document.querySelector(".bottom");
 const crab = document.querySelector(".crab");
 const coral_2 = document.querySelector(".coral_2");
 const coral_3 = document.querySelector(".coral_3");
+const gameOver = document.querySelector(".gameOver");
 
 var intervalFishLeft;
 var intervalFishRight;
@@ -46,6 +47,7 @@ function showRules(){
 
 function changeBackground(){
 
+
     if(healthCount <= 5){
         topImage.classList.add("transparent");
     }
@@ -57,9 +59,10 @@ function changeBackground(){
         coral_3.classList.add("transparent2");
     }
 
-    if(healthCount == 0) {
+    if(healthCount <= 0) {
         endGame();
     }
+
 }
 
 function showScoreboard() {
@@ -146,8 +149,7 @@ function mute() {
 }
 
 function endGame() {
-    clearInterval(intervalFishLeft);
-    clearInterval(intervalFishRight);
+    gameOver.style.display = "block";
 }
 
 
