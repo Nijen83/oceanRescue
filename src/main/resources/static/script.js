@@ -23,7 +23,7 @@ function startGame(){
     msgArea.innerHTML = "";
     msgArea.classList.add("hidden");
     music.play();
-    var rand = Math.floor(Math.random() * 8000);
+    var rand = Math.floor(Math.random() * 7000);
     setInterval(addfishLeft, rand);
     setInterval(addfishRight, rand);
     setInterval(addTrash, 8000);
@@ -144,7 +144,6 @@ function mute() {
       music.play();
     }
 }
-
 
 function endGame() {
     clearInterval(intervalFishLeft);

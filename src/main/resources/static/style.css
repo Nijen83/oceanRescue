@@ -63,6 +63,17 @@ h2 {
     transition: opacity 1s ease-in-out;
 }
 
+#game-area #unmuted {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+
 #game-area img.transparent {
     opacity:0;
 }
@@ -123,7 +134,6 @@ h2 {
     text-shadow: 2px 2px 5px black;
     box-shadow: inset 2px 2px 10px black;
 }
-
 
 .hidden {
     display: none;
@@ -468,7 +478,6 @@ h2 {
 
 #unmuted {
     margin-left: 40px;
-}
 }
 
 
