@@ -5,6 +5,9 @@ const rules = document.querySelector(".rules");
 const scoreboard = document.querySelector(".scoreboard");
 const topImage = document.querySelector(".top");
 const bottomImage = document.querySelector(".bottom");
+const crab = document.querySelector(".crab");
+const coral_2 = document.querySelector(".coral_2");
+const coral_3 = document.querySelector(".coral_3");
 
 var intervalFishLeft;
 var intervalFishRight;
@@ -40,9 +43,16 @@ function changeBackground(){
 
     if(healthCount <= 5){
         topImage.classList.add("transparent");
-    } else if(healthCount <= 2) {
-        gameArea.style.backgroundImage = "url('images/logo.png')";
-    }else if(healthCount == 0) {
+    }
+
+    if(healthCount <= 2) {
+        bottomImage.classList.add("semiTransparent");
+        crab.classList.add("transparent2");
+        coral_2.classList.add("transparent2");
+        coral_3.classList.add("transparent2");
+    }
+
+    if(healthCount == 0) {
         endGame();
     }
 }
