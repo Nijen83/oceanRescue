@@ -3,25 +3,33 @@ const gameArea = document.querySelector("#game-area");
 const title = document.querySelector("h1");
 const rules = document.querySelector(".rules");
 const scoreboard = document.querySelector(".scoreboard");
+const topImage = document.querySelector(".top");
+const bottomImage = document.querySelector(".bottom");
+
+var intervalFishLeft;
+var intervalFishRight;
 
 let score = 0;
 let healthCount = 10;
 
 
+
 // For health bar
-let health = document.getElementByID("health");
+//let health = document.getElementByID("health");
 // Update health bar by inserting "health.value = (value)" in the functions
 
 function startGame(){
     msgArea.innerHTML = "";
     msgArea.classList.add("hidden");
 
-    var rand = Math.floor(Math.random() * 8000);
-    setInterval(addfishLeft, rand);
-    setInterval(addfishRight, rand);
-    setInterval(addTrash, 8000);
-    updateScore();
-    changeBackground();
+    if(healthCount > 0) {
+        var rand = Math.floor(Math.random() * 8000);
+        intervalFishLeft = setInterval(addfishLeft, rand);
+        intervalFishRight = setInterval(addfishRight, rand);
+        setInterval(addTrash, 8000);
+        updateScore();
+        changeBackground();
+    }
 }
 
 function showRules(){
@@ -31,11 +39,12 @@ function showRules(){
 function changeBackground(){
 
     if(healthCount <= 5){
-        gameArea.style.backgroundImage = "url('images/background_plastic.jpeg')";
-    } else {
-        gameArea.style.backgroundImage = "url('images/background.jpeg')";
+        topImage.classList.add("transparent");
+    } else if(healthCount <= 2) {
+        gameArea.style.backgroundImage = "url('images/logo.png')";
+    }else if(healthCount == 0) {
+        endGame();
     }
-
 }
 
 function showScoreboard() {
@@ -111,6 +120,11 @@ function addTrash(){
 
 function updateScore(){
     title.innerHTML = "<span>Score: " + score +  " </br> Health: " + healthCount + "</span>";
+}
+
+function endGame() {
+    clearInterval(intervalFishLeft);
+    clearInterval(intervalFishRight);
 }
 
 
