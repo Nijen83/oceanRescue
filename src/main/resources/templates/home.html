@@ -4,10 +4,15 @@
     <link rel="stylesheet" href="..static/style.css" th:href="style.css">
     <title>Ocean Rescue</title>
     <meta charset="utf-8">
+
 </head>
 <body>
+<audio autoplay class="music"
+       src="images/music.mp3" type="audio/mpeg">
+</audio>
 <section>
     <div id="message-area" style="color: white; justify-content: center;" >
+
         <h2 id="start" onclick="startGame()">START!</h2>
         <h2 onclick="showRules()">Show Rules</h2>
         <h2 onclick="showScoreboard()">Show Scoreboard</h2>
@@ -22,6 +27,7 @@
         <img class="bottom" src="images/background_plastic.jpeg" />
         <img class="top" src="images/background.jpeg" />
         <h1></h1>
+        <img src="images/audio/unmute.png" onclick="mute()" id="unmuted">
         <div class="crab"></div>
         <div class="coral_2"></div>
         <div class="coral_3"></div>

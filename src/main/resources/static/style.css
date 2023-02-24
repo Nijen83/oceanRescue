@@ -43,6 +43,10 @@ h2 {
     left: 40px;
     width: 1200px;
     height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
     cursor: pointer;
     box-shadow: inset 2px 2px 10px black;
     overflow: hidden;
@@ -120,6 +124,7 @@ h2 {
     box-shadow: inset 2px 2px 10px black;
 }
 
+
 .hidden {
     display: none;
 }
@@ -131,6 +136,8 @@ h2 {
     width: 50px;
     animation: right 20s normal;
     background-repeat: no-repeat;
+        position: absolute;
+
 }
 .fish_2 {
     background-image: url("images/fish/fish_2_r.gif");
@@ -139,6 +146,8 @@ h2 {
     width: 100px;
     animation: right 24s normal;
     background-repeat: no-repeat;
+        position: absolute;
+
 }
 
 .fish_3 {
@@ -148,6 +157,8 @@ h2 {
     width: 120px;
     animation: right 35s normal;
     background-repeat: no-repeat;
+        position: absolute;
+
 }
 
 .fish_4 {
@@ -157,6 +168,8 @@ h2 {
     width: 50px;
     animation: left 15s normal;
     background-repeat: no-repeat;
+        position: absolute;
+
 }
 
 .fish_5 {
@@ -165,6 +178,8 @@ h2 {
     height: 85px;
     width: 100px;
     animation: left 18s normal;
+        position: absolute;
+
 }
 
 .fish_6 {
@@ -173,6 +188,8 @@ h2 {
     height: 60px;
     width: 60px;
     animation: right 50s normal;
+        position: absolute;
+
 }
 
 .fish_7 {
@@ -182,6 +199,8 @@ h2 {
     width: 80px;
     animation: left 18s normal;
     transform: scaleX(-1);
+        position: absolute;
+
 }
 
 .fish_8 {
@@ -335,6 +354,7 @@ h2 {
     animation: trash 40s normal;
 }
 
+
 @keyframes left {
     from {
         margin-left:-200px;
@@ -446,7 +466,10 @@ h2 {
     transition: width .5s linear;
 }
 
-
+#unmuted {
+    margin-left: 40px;
+}
+}
 
 
 
