@@ -318,6 +318,7 @@ margin-top: 250px;
 }
 
 
+
 @keyframes left {
     from {
         margin-left:-200px;
@@ -418,7 +419,10 @@ margin-top: 250px;
     transition: width .5s linear;
 }
 
-
+#unmuted {
+    margin-left: 40px;
+}
+}
 
 
 

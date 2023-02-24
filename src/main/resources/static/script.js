@@ -3,19 +3,16 @@ const gameArea = document.querySelector("#game-area");
 const title = document.querySelector("h1");
 const rules = document.querySelector(".rules");
 const scoreboard = document.querySelector(".scoreboard");
+const music = document.querySelector(".music");
+const unmuted = document.querySelector("#unmuted");
 
 let score = 0;
 let healthCount = 10;
 
-
-// For health bar
-let health = document.getElementByID("health");
-// Update health bar by inserting "health.value = (value)" in the functions
-
 function startGame(){
     msgArea.innerHTML = "";
     msgArea.classList.add("hidden");
-
+    music.play();
     var rand = Math.floor(Math.random() * 8000);
     setInterval(addfishLeft, rand);
     setInterval(addfishRight, rand);
@@ -112,5 +109,14 @@ function addTrash(){
 function updateScore(){
     title.innerHTML = "<span>Score: " + score +  " </br> Health: " + healthCount + "</span>";
 }
+
+function mute() {
+    if (!music.paused) {
+      music.pause();
+    } else {
+      music.play();
+    }
+}
+
 
 
