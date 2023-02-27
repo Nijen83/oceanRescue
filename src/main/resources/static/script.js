@@ -17,28 +17,28 @@ var intervalFishRight;
 
 let score = 0;
 let healthCount = 10;
-
-
+let trashInterval = 6000;
 
 function startGame(){
     msgArea.innerHTML = "";
     msgArea.classList.add("hidden");
     music.play();
-    var rand = Math.floor(Math.random() * 7000);
+    addfishLeft();
+    addfishRight();
+
+    var rand = Math.floor(Math.random() * 9000);
     setInterval(addfishLeft, rand);
     setInterval(addfishRight, rand);
-    setInterval(addTrash, 8000);
+    setInterval(addTrash, trashInterval);
     updateScore();
     changeBackground();
 
-    if(healthCount > 0) {
-        var rand = Math.floor(Math.random() * 8000);
-        intervalFishLeft = setInterval(addfishLeft, rand);
-        intervalFishRight = setInterval(addfishRight, rand);
-        setInterval(addTrash, 8000);
-        updateScore();
-        changeBackground();
-    }
+    var rand = Math.floor(Math.random() * 8000);
+    intervalFishLeft = setInterval(addfishLeft, rand);
+    intervalFishRight = setInterval(addfishRight, rand);
+    setInterval(addTrash, 8000);
+    updateScore();
+    changeBackground();
 }
 
 function showRules(){
@@ -46,7 +46,6 @@ function showRules(){
 }
 
 function changeBackground(){
-
 
     if(healthCount <= 5){
         topImage.classList.add("transparent");
@@ -106,7 +105,7 @@ function addfishRight(){
         healthCount--;
         updateScore();
         changeBackground();
-    });
+   });
 }
 
 function addTrash(){
@@ -131,6 +130,7 @@ function addTrash(){
         } else {
             score += 25;
         }
+        levels();
         updateScore();
         changeBackground();
     });
@@ -152,4 +152,20 @@ function endGame() {
     gameOver.style.display = "block";
 }
 
-
+function levels() {
+    if(score >= 500){
+        trashInterval = 5000;
+    }
+    if(score >= 1000){
+        trashInterval = 4000;
+    }
+    if(score >= 1500){
+        trashInterval = 3000;
+    }
+    if(score >= 2000){
+        trashInterval = 2000;
+    }
+    if(score >= 2500){
+        trashInterval = 1000;
+    }
+}
