@@ -8,6 +8,6 @@ import java.util.List;
 @Service
 public interface ScoreRepo extends JpaRepository<Score, Long> {
 
-    List<Score> findAll();
+    List<Score> findAllByOrderByScoreDesc();
 
 }

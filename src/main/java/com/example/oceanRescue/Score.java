@@ -13,6 +13,9 @@ public class Score {
     int score;
     String userName;
 
+    public Score() {
+    }
+
     public Score(int score, String userName) {
         this.score = score;
         this.userName = userName;
