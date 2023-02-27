@@ -21,13 +21,19 @@
         </div>
         <div class="scoreboard">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">X</span>
+            <ol th:each="highScores : ${scores}">
+                <li th:text="${highScores.score}"></li>
+            </ol>
+
         </div>
 
 
     </div>
     <div id="game-area" style="color: white; justify-content: center;">
         <div class="gameOver">
+            <form th:object="${score}" action="/save"  method="post">
 
+            </form>
         </div>
 
         <img class="bottom" src="images/background_plastic.jpeg" />

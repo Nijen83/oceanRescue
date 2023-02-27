@@ -11,6 +11,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 
@@ -21,14 +24,22 @@ class OceanRescueApplicationTests {
 
 	@Autowired
 	MockMvc mvc;
+
+	@Autowired
+	ScoreRepo scoreRepo;
 	@Test
 	void contextLoads() {
 	}
 
 	@Test
 	void testString() throws Exception {
-
 		mvc.perform(MockMvcRequestBuilders.get("/"));
+	}
+
+	@Test
+	void findAll() {
+		List<Score> scores = scoreRepo.findAll();
+		Assert.assertEquals(0, scores.size());
 	}
 
 
