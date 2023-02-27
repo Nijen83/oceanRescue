@@ -21,8 +21,8 @@
         </div>
         <div class="scoreboard">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">X</span>
-            <ol>
-                <li th:each="highScores : ${scores}" th:text="${highScores.score}"></li>
+            <ol style="font-family:'Verdana'; font-size: 35px; left: 450px; position: absolute; top: 150px;">
+                <li th:each="highScores : ${scores}" th:text="${highScores.score} + '.........' + ${highScores.userName}"></li>
             </ol>
 
         </div>

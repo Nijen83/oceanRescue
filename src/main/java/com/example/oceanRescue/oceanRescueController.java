@@ -16,8 +16,9 @@ public class oceanRescueController {
 
     @GetMapping("/")
     public String goToGame(Model model) {
-        List<Score> scores = scoreRepo.findAllByOrderByScoreDesc();
+        List<Score> scores = scoreRepo.findTop10ByOrderByScoreDesc();
         model.addAttribute("scores", scores);
         return "home";
     }
+
 }
