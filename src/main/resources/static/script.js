@@ -8,6 +8,7 @@ const unmuted = document.querySelector("#unmuted");
 const topImage = document.querySelector(".top");
 const bottomImage = document.querySelector(".bottom");
 const crab = document.querySelector(".crab");
+const crab_2 = document.querySelector(".crab_2");
 const coral_2 = document.querySelector(".coral_2");
 const coral_3 = document.querySelector(".coral_3");
 const gameOver = document.querySelector(".gameOver");
@@ -33,7 +34,6 @@ function startGame(){
     setInterval(addTrash, trashInterval);
     updateScore();
     changeBackground();
-    levels();
 
     var rand = Math.floor(Math.random() * 8000);
     intervalFishLeft = setInterval(addfishLeft, rand);
