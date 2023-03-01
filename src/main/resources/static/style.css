@@ -21,9 +21,10 @@ h1 {
     padding:10px;
     padding-right:30px;
     padding-left:30px;
-    width: 960px;
+    width: 200px;
     z-index: 900;
-    position: absolute
+    position: absolute;
+    right: 0px;
 }
 
 h2 {
@@ -72,7 +73,6 @@ h2 {
     -o-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
 }
-
 
 #game-area img.transparent {
     opacity:0;
@@ -123,13 +123,14 @@ h2 {
     position: absolute;
     width: 1200px;
     height: 800px;
-    z-index: 1000;
+    z-index: 999;
     background-color: black;
     background-image: url("images/GameOver.png");
     display: none;
     text-shadow: 2px 2px 5px black;
     box-shadow: inset 2px 2px 10px black;
 }
+
 
 .scoreboard {
     position: absolute;
@@ -158,9 +159,8 @@ h2 {
     width: 50px;
     animation: right 20s normal;
     background-repeat: no-repeat;
-        position: absolute;
-
 }
+
 .fish_2 {
     background-image: url("images/fish/fish_2_r.gif");
     background-size: cover;
@@ -168,8 +168,6 @@ h2 {
     width: 100px;
     animation: right 24s normal;
     background-repeat: no-repeat;
-        position: absolute;
-
 }
 
 .fish_3 {
@@ -179,8 +177,6 @@ h2 {
     width: 120px;
     animation: right 35s normal;
     background-repeat: no-repeat;
-        position: absolute;
-
 }
 
 .fish_4 {
@@ -190,8 +186,6 @@ h2 {
     width: 50px;
     animation: left 15s normal;
     background-repeat: no-repeat;
-        position: absolute;
-
 }
 
 .fish_5 {
@@ -200,8 +194,6 @@ h2 {
     height: 85px;
     width: 100px;
     animation: left 18s normal;
-        position: absolute;
-
 }
 
 .fish_6 {
@@ -210,8 +202,6 @@ h2 {
     height: 60px;
     width: 60px;
     animation: right 50s normal;
-        position: absolute;
-
 }
 
 .fish_7 {
@@ -221,8 +211,6 @@ h2 {
     width: 80px;
     animation: left 18s normal;
     transform: scaleX(-1);
-        position: absolute;
-
 }
 
 .fish_8 {
@@ -232,6 +220,51 @@ h2 {
     width: 130px;
     animation: right 30s normal;
 }
+.fish_9_r {
+    background-image: url("images/fish/fish_9_r.gif");
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+    animation: right 40s normal;
+}
+.fish_10_r {
+    background-image: url("images/fish/fish_10_r.gif");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    animation: right 30s normal;
+}
+
+.fish_11_r {
+    background-image: url("images/fish/fish_11_r.gif");
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    animation: right 60s normal;
+}
+.fish_12_l {
+    background-image: url("images/fish/fish_12_l.gif");
+    background-size: cover;
+    height: 60px;
+    width: 60px;
+    animation: left 50s normal;
+}
+.fish_13_r {
+    background-image: url("images/fish/fish_13_r.gif");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    animation: left 50s normal;
+    transform: scaleX(-1);
+}
+.fish_14_r {
+    background-image: url("images/fish/fish_14_r.gif");
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+    animation: left 50s normal;
+    transform: scaleX(-1);
+}
 
 .seahorse {
     background-image: url("images/fish/sea_horse_l.gif");
@@ -240,6 +273,15 @@ h2 {
     width: 60px;
     animation: left 40s normal;
     transform: rotate(30deg);
+}
+
+.seahorse_2 {
+    background-image: url("images/fish/seahorse_2.gif");
+    background-size: cover;
+    height: 60px;
+    width: 60px;
+    animation: left 40s normal;
+    transform: rotate(-20deg);
 }
 
 .stingray {
@@ -260,12 +302,30 @@ h2 {
     transform: rotate(30deg);
 }
 
+.octopus_2 {
+    background-image: url("images/fish/octopus_2.gif");
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    animation: right 50s normal;
+    transform: rotate(-20deg);
+}
+
+.shrimp {
+    background-image: url("images/fish/shrimp.gif");
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    animation: right 50s normal;
+    transform: scaleX(-1);
+}
+
 .turtle {
     background-image: url("images/fish/turtle_r.gif");
     background-size: cover;
     height: 150px;
     width: 150px;
-    animation: right 30s normal;
+    animation: right 40s normal;
     transform: rotate(60deg);
 }
 
@@ -277,6 +337,20 @@ h2 {
     bottom: 100px;
     position:absolute;
     left: 300px;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+.crab_2 {
+    background-image: url("images/fish/crab_2.gif");
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    bottom: 100px;
+    position:absolute;
+    left: 1075px;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
@@ -382,7 +456,7 @@ h2 {
         margin-left:-200px;
     }
     to {
-        margin-left:1500px;
+        margin-left:1600px;
     }
 }
 
@@ -391,7 +465,7 @@ h2 {
         margin-left:1600px;
     }
     to {
-        margin-left:-2000px;
+        margin-left:-2100px;
     }
 }
 
@@ -405,14 +479,14 @@ h2 {
 }
 
 @keyframes rotationR {
-  from {
-    margin-top:-200px;
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-    margin-top:1000px;
-  }
+    from {
+        margin-top:-200px;
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+        margin-top:1000px;
+    }
 }
 
 @keyframes rotationL {
@@ -491,7 +565,3 @@ h2 {
 #unmuted {
     margin-left: 40px;
 }
-
-
-
-

@@ -11,13 +11,14 @@ const crab = document.querySelector(".crab");
 const coral_2 = document.querySelector(".coral_2");
 const coral_3 = document.querySelector(".coral_3");
 const gameOver = document.querySelector(".gameOver");
+const yourScore = document.querySelector(".your_score");
 
 var intervalFishLeft;
 var intervalFishRight;
 
 let score = 0;
 let healthCount = 10;
-let trashInterval = 6000;
+let trashInterval = 2100;
 
 function startGame(){
     msgArea.innerHTML = "";
@@ -27,11 +28,12 @@ function startGame(){
     addfishRight();
 
     var rand = Math.floor(Math.random() * 9000);
-    setInterval(addfishLeft, rand);
-    setInterval(addfishRight, rand);
+    setInterval(addfishLeft, 3000);
+    setInterval(addfishRight, 3000);
     setInterval(addTrash, trashInterval);
     updateScore();
     changeBackground();
+    levels();
 
     var rand = Math.floor(Math.random() * 8000);
     intervalFishLeft = setInterval(addfishLeft, rand);
@@ -45,6 +47,11 @@ function showRules(){
     rules.style.display = "block";
 }
 
+function displayHighscore(){
+    endGame.innerHTML = score;
+}
+
+
 function changeBackground(){
 
     if(healthCount <= 5){
@@ -54,6 +61,7 @@ function changeBackground(){
     if(healthCount <= 2) {
         bottomImage.classList.add("semiTransparent");
         crab.classList.add("transparent2");
+        crab_2.classList.add("transparent2");
         coral_2.classList.add("transparent2");
         coral_3.classList.add("transparent2");
     }
@@ -61,7 +69,6 @@ function changeBackground(){
     if(healthCount <= 0) {
         endGame();
     }
-
 }
 
 function showScoreboard() {
@@ -69,13 +76,13 @@ function showScoreboard() {
 }
 
 function addfishLeft(){
-    var arr = ["fish_4", "fish_5", "seahorse", "fish_4", "stingray", "fish_7", "octopus"];
+    var arr = ["fish_4_r", "fish_4", "fish_5", "seahorse", "fish_4", "stingray", "fish_7", "octopus", "fish_12_l", "fish_13_r", "fish_13_r", "fish_14_r"];
 
     const fishLeft = document.createElement("div");
     fishLeft.classList.add(arr[Math.floor(Math.random() * arr.length)]);
     fishLeft.style.position = "absolute";
     fishLeft.style.left = "-200px";
-    fishLeft.style.top = Math.floor(Math.random() * (600 - 150 + 1)) + 100 + "px";
+    fishLeft.style.top = Math.floor(Math.random() * 700) + "px";
     fishLeft.appendChild(document.createElement("div"));
 
     gameArea.appendChild(fishLeft);
@@ -89,13 +96,13 @@ function addfishLeft(){
 }
 
 function addfishRight(){
-    var arr = ["fish_1", "fish_2", "fish_3", "fish_6", "fish_8", "turtle", "fish_1"];
+    var arr = ["fish_1", "fish_2", "fish_3", "fish_6", "fish_8", "turtle", "fish_1", "fish_9_r", "fish_10_r", "fish_10_r", "fish_10_r", "fish_11_r", "shrimp", "shrimp", "octopus_2", "seahorse_2", "seahorse_2"];
 
     const fishRight = document.createElement("div");
     fishRight.classList.add(arr[Math.floor(Math.random() * arr.length)]);
     fishRight.style.position = "absolute";
     fishRight.style.left = "1200px";
-    fishRight.style.top = Math.floor(Math.random() *  (500 - 450 + 1)) + 450 + "px";
+    fishRight.style.top = Math.floor(Math.random() * 700) + "px";
     fishRight.appendChild(document.createElement("div"));
 
     gameArea.appendChild(fishRight);
@@ -150,22 +157,24 @@ function mute() {
 
 function endGame() {
     gameOver.style.display = "block";
+    document.getElementById("myHighscore").value = score;
+    yourScore.innerHTML = "Your score: " + score;
 }
 
 function levels() {
     if(score >= 500){
-        trashInterval = 5000;
+        trashInterval = 1800;
     }
     if(score >= 1000){
-        trashInterval = 4000;
+        trashInterval = 1500;
     }
     if(score >= 1500){
-        trashInterval = 3000;
+        trashInterval = 1200;
     }
     if(score >= 2000){
-        trashInterval = 2000;
+        trashInterval = 900;
     }
     if(score >= 2500){
-        trashInterval = 1000;
+        trashInterval = 600;
     }
 }

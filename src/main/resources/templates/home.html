@@ -24,18 +24,19 @@
             <ol style="font-family:'Verdana'; font-size: 35px; left: 450px; position: absolute; top: 150px;">
                 <li th:each="highScores : ${scores}" th:text="${highScores.score} + '.........' + ${highScores.userName}"></li>
             </ol>
-
         </div>
-
-
     </div>
     <div id="game-area" style="color: white; justify-content: center;">
         <div class="gameOver">
-            <form th:object="${score}" action="/save"  method="post">
+            <h2 class="your_score" style="top:250px; font-size: 50px; position: relative; text-align: center;"></h2>
 
+            <form th:object="${score}" action="/save"  method="post" name="saveScore" style="position: relative; text-align: center; top:350px;">
+                <input type="text" maxlength="3" th:name="userName"/>
+                <input type="hidden" id="myHighscore" th:name="score"/>
+                <input type="submit"/>
             </form>
-        </div>
 
+        </div>
         <img class="bottom" src="images/background_plastic.jpeg" />
         <img class="top" src="images/background.jpeg" />
         <h1></h1>
@@ -43,11 +44,11 @@
         <img src="images/audio/unmutedOn.png">
         </div>
         <div class="crab"></div>
+        <div class="crab_2"></div>
         <div class="coral_2"></div>
         <div class="coral_3"></div>
     </div>
 </section>
-
 <script src="script.js"></script>
 </body>
 </html>

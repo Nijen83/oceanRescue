@@ -9,5 +9,4 @@ import java.util.List;
 public interface ScoreRepo extends JpaRepository<Score, Long> {
 
     List<Score> findTop10ByOrderByScoreDesc();
-
 }
