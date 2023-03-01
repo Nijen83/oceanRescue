@@ -13,6 +13,7 @@ const coral_2 = document.querySelector(".coral_2");
 const coral_3 = document.querySelector(".coral_3");
 const gameOver = document.querySelector(".gameOver");
 const yourScore = document.querySelector(".your_score");
+const life = document.querySelector(".life");
 
 var intervalFishLeft;
 var intervalFishRight;
@@ -144,7 +145,7 @@ function addTrash(){
 }
 
 function updateScore(){
-    title.innerHTML = "<span>Score: " + score +  " </br> Health: " + healthCount + "</span>";
+    title.innerHTML = "<span>Score: " + score +  " </br><img src='images/life.png' style='height: 30px; width: 30px; right: 50px; position: absolute;'> " + healthCount + "</span>";
 }
 
 function mute() {
