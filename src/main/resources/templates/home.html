@@ -31,7 +31,7 @@
             <h2 class="your_score" style="top:250px; font-size: 50px; position: relative; text-align: center;"></h2>
 
             <form th:object="${score}" action="/save"  method="post" name="saveScore" style="position: relative; text-align: center; top:350px;">
-                <input type="text" maxlength="3" th:name="userName"/>
+                <input type="text" maxlength="3" th:name="userName" style="font-size: 50px; height: 75px; width: 150px; background: transparent; border: 7px solid white; text-align: center; font-weight: bold; color: white; position: relative; border-radius: 20px;"/><br/>
                 <input type="hidden" id="myHighscore" th:name="score"/>
                 <input type="submit"/>
             </form>
