@@ -29,9 +29,8 @@ function startGame(){
     addfishLeft();
     addfishRight();
 
-    var rand = Math.floor(Math.random() * 9000);
-    setInterval(addfishLeft, 3000);
-    setInterval(addfishRight, 3000);
+    setInterval(addfishLeft, 6000);
+    setInterval(addfishRight, 6000);
     setInterval(addTrash, trashInterval);
     updateScore();
     changeBackground();
@@ -179,3 +178,26 @@ function levels() {
         trashInterval = 600;
     }
 }
+
+
+
+gameArea.addEventListener("click", e => {
+    const x = e.pageX;
+    const y = e.pageY;
+    const randomSize = Math.random() * (30 - 5) + 5;
+
+    const bubble = document.createElement("div");
+    bubble.classList.add('bubble');
+
+    bubble.style.left = (x - 392) + "px";
+    bubble.style.top = (y - 72) + "px";
+    bubble.style.width = randomSize + "px";
+    bubble.style.height = randomSize + "px";
+
+    gameArea.appendChild(bubble);
+
+    setTimeout(function(){
+        bubble.style.display = 'none';
+    }, 7000);
+
+});
