@@ -74,6 +74,7 @@ function addfishLeft(){
     fishLeft.classList.add(arr[Math.floor(Math.random() * arr.length)]);
     fishLeft.style.position = "absolute";
     fishLeft.style.left = "-200px";
+    fishLeft.style.backgroundSize = "cover";
     fishLeft.style.top = Math.floor(Math.random() * 700) + "px";
 
     fishLeft.appendChild(document.createElement("div"));
@@ -99,6 +100,7 @@ function addfishRight(){
     fishRight.classList.add(arr[Math.floor(Math.random() * arr.length)]);
     fishRight.style.position = "absolute";
     fishRight.style.left = "1200px";
+    fishRight.style.backgroundSize = "cover";
     fishRight.style.top = Math.floor(Math.random() * 700) + "px";
 
     fishRight.appendChild(document.createElement("div"));
@@ -122,6 +124,7 @@ function addTrash(){
     const trash = document.createElement("div");
     trash.classList.add(arr[Math.floor(Math.random() * arr.length)]);
     trash.style.position = "absolute";
+    trash.style.backgroundSize = "cover";
     trash.style.left = Math.floor(Math.random() *  1100) + "px";
     trash.style.top = "-100px";
 

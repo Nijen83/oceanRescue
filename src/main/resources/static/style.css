@@ -1,10 +1,9 @@
 body {
     background-color: #155489;
-    cursor: url(fishing-net.svg), auto;
+    font-family: "Verdana";
 }
 
 h1, h2, h3, h4, h5, h6, p {
-    font-family: "Verdana";
     color: white;
     margin: 30px;
     text-align: center;
@@ -157,7 +156,6 @@ h2 {
 
 .fish_1 {
     background-image: url("images/fish/fish_1_r.gif");
-    background-size: cover;
     height: 40px;
     width: 50px;
     animation: right 20s normal;
@@ -166,7 +164,6 @@ h2 {
 
 .fish_2 {
     background-image: url("images/fish/fish_2_r.gif");
-    background-size: cover;
     height: 80px;
     width: 100px;
     animation: right 24s normal;
@@ -175,7 +172,6 @@ h2 {
 
 .fish_3 {
     background-image: url("images/fish/fish_3_r.gif");
-    background-size: cover;
     height: 120px;
     width: 120px;
     animation: right 35s normal;
@@ -184,7 +180,6 @@ h2 {
 
 .fish_4 {
     background-image: url("images/fish/fish_4_l.gif");
-    background-size: cover;
     height: 40px;
     width: 50px;
     animation: left 15s normal;
@@ -193,7 +188,6 @@ h2 {
 
 .fish_5 {
     background-image: url("images/fish/fish_5_l.gif");
-    background-size: cover;
     height: 85px;
     width: 100px;
     animation: left 18s normal;
@@ -201,7 +195,6 @@ h2 {
 
 .fish_6 {
     background-image: url("images/fish/fish_6_r.gif");
-    background-size: cover;
     height: 60px;
     width: 60px;
     animation: right 50s normal;
@@ -209,7 +202,6 @@ h2 {
 
 .fish_7 {
     background-image: url("images/fish/fish_7_r.gif");
-    background-size: cover;
     height: 80px;
     width: 80px;
     animation: left 18s normal;
@@ -218,21 +210,18 @@ h2 {
 
 .fish_8 {
     background-image: url("images/fish/fish_8_r.gif");
-    background-size: cover;
     height: 110px;
     width: 130px;
     animation: right 30s normal;
 }
 .fish_9_r {
     background-image: url("images/fish/fish_9_r.gif");
-    background-size: cover;
     height: 70px;
     width: 70px;
     animation: right 40s normal;
 }
 .fish_10_r {
     background-image: url("images/fish/fish_10_r.gif");
-    background-size: cover;
     height: 50px;
     width: 50px;
     animation: right 30s normal;
@@ -240,21 +229,18 @@ h2 {
 
 .fish_11_r {
     background-image: url("images/fish/fish_11_r.gif");
-    background-size: cover;
     height: 80px;
     width: 80px;
     animation: right 60s normal;
 }
 .fish_12_l {
     background-image: url("images/fish/fish_12_l.gif");
-    background-size: cover;
     height: 60px;
     width: 60px;
     animation: left 50s normal;
 }
 .fish_13_r {
     background-image: url("images/fish/fish_13_r.gif");
-    background-size: cover;
     height: 50px;
     width: 50px;
     animation: left 50s normal;
@@ -262,7 +248,6 @@ h2 {
 }
 .fish_14_r {
     background-image: url("images/fish/fish_14_r.gif");
-    background-size: cover;
     height: 70px;
     width: 70px;
     animation: left 50s normal;
@@ -271,7 +256,6 @@ h2 {
 
 .seahorse {
     background-image: url("images/fish/sea_horse_l.gif");
-    background-size: cover;
     height: 60px;
     width: 60px;
     animation: left 40s normal;
@@ -280,7 +264,6 @@ h2 {
 
 .seahorse_2 {
     background-image: url("images/fish/seahorse_2_l.gif");
-    background-size: cover;
     height: 60px;
     width: 60px;
     animation: right 40s normal;
@@ -290,7 +273,6 @@ h2 {
 
 .stingray {
     background-image: url("images/fish/stingray_l.gif");
-    background-size: cover;
     height: 150px;
     width: 150px;
     transform: rotate(-30deg);
@@ -299,7 +281,6 @@ h2 {
 
 .octopus {
     background-image: url("images/fish/octopus.gif");
-    background-size: cover;
     height: 200px;
     width: 200px;
     animation: left 40s normal;
@@ -308,7 +289,6 @@ h2 {
 
 .octopus_2 {
     background-image: url("images/fish/octopus_2.gif");
-    background-size: cover;
     height: 200px;
     width: 200px;
     animation: right 50s normal;
@@ -317,7 +297,6 @@ h2 {
 
 .shrimp {
     background-image: url("images/fish/shrimp.gif");
-    background-size: cover;
     height: 40px;
     width: 40px;
     animation: right 50s normal;
@@ -326,7 +305,6 @@ h2 {
 
 .turtle {
     background-image: url("images/fish/turtle_r.gif");
-    background-size: cover;
     height: 150px;
     width: 150px;
     animation: right 40s normal;
@@ -391,7 +369,6 @@ h2 {
 
 .trash_1{
     background-image: url("images/trash/beer_bottle.png");
-    background-size: cover;
     position: absolute;
     height: 60px;
     width: 60px;
@@ -400,7 +377,6 @@ h2 {
 
 .trash_2{
     background-image: url("images/trash/beverage_can_empty.png");
-    background-size: cover;
     height: 40px;
     width: 40px;
     animation: trash 40s normal;
@@ -408,7 +384,6 @@ h2 {
 
 .trash_3{
     background-image: url("images/trash/bottle.png");
-    background-size: cover;
     height: 60px;
     width: 60px;
     animation: trash 40s normal;
@@ -416,7 +391,6 @@ h2 {
 
 .trash_4{
     background-image: url("images/trash/can.png");
-    background-size: cover;
     height: 40px;
     width: 40px;
     animation: rotationR 40s normal;
@@ -424,7 +398,6 @@ h2 {
 
 .trash_5{
     background-image: url("images/trash/plastic_bag.png");
-    background-size: cover;
     height: 100px;
     width: 100px;
     animation: rotationL 40s normal;
@@ -432,7 +405,6 @@ h2 {
 
 .trash_6{
     background-image: url("images/trash/plastic_rings.png");
-    background-size: cover;
     height: 80px;
     width: 80px;
     animation: rotationR 40s normal;
@@ -440,7 +412,6 @@ h2 {
 
 .trash_7{
     background-image: url("images/trash/cigarette.png");
-    background-size: cover;
     height: 30px;
     width: 30px;
     animation: rotationL 40s normal;
@@ -448,13 +419,12 @@ h2 {
 
 .trash_8{
     background-image: url("images/trash/straw.png");
-    background-size: cover;
     height: 30px;
     width: 30px;
     animation: trash 40s normal;
 }
 
-
+/*Moving fish from left to right*/
 @keyframes left {
     from {
         margin-left:-200px;
@@ -464,6 +434,7 @@ h2 {
     }
 }
 
+/*Moving fish from right to left*/
 @keyframes right {
     from {
         margin-left:1600px;
@@ -473,6 +444,7 @@ h2 {
     }
 }
 
+/*Moving trash from right to left*/
 @keyframes trash {
     from {
         margin-top:-200px;
@@ -482,6 +454,7 @@ h2 {
     }
 }
 
+/*rotatet right*/
 @keyframes rotationR {
     from {
         margin-top:-200px;
@@ -493,6 +466,7 @@ h2 {
     }
 }
 
+/*rotatet left*/
 @keyframes rotationL {
   from {
     margin-top:-200px;
@@ -504,6 +478,7 @@ h2 {
   }
 }
 
+/*Changing image*/
 @keyframes image {
   0% {
     background-image: url('images/background.jpeg');
@@ -536,38 +511,6 @@ h2 {
     text-align: center;
 }
 
-.health {
-     -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-     box-sizing: border-box;
-     width: 200px;
-     height: 20px;
-     padding: 5px;
-     background: #ddd;
-     -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-     border-radius: 5px;
-     position: relative;
-     z-index: 900;
-}
-
-.bar {
-    background: #c54;
-    width: 200px;
-    height: 20x;
-    position: relative;
-    transition: width .5s linear;
-    .hit {
-    background: rgba(255,255,255,0.6);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 0px;
-    transition: width .5s linear;
-    }
-}
-
 #unmuted {
     margin-left: 40px;
 }
@@ -583,6 +526,7 @@ h2 {
     animation: move_bubbles 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
 }
 
+/*Moving bubbles up*/
 @keyframes move_bubbles {
     0% {
     }
@@ -591,6 +535,7 @@ h2 {
     }
 }
 
+/*Moving bubbles from side to side*/
 @keyframes sideWays {
     0% {
         margin-left:0px;
