@@ -42,22 +42,19 @@ function startGame(){
     updateScore();
     changeBackground();
 }
-
+//......Display .rules div......
 function showRules(){
     rules.style.display = "block";
 }
-
+//......Display .scoreboard div......
 function displayHighscore(){
     endGame.innerHTML = score;
 }
-
-
+//......Change background image......
 function changeBackground(){
-
     if(healthCount <= 5){
         topImage.classList.add("transparent");
     }
-
     if(healthCount <= 2) {
         bottomImage.classList.add("semiTransparent");
         crab.classList.add("transparent2");
@@ -65,7 +62,6 @@ function changeBackground(){
         coral_2.classList.add("transparent2");
         coral_3.classList.add("transparent2");
     }
-
     if(healthCount <= 0) {
         endGame();
     }
@@ -178,8 +174,6 @@ function levels() {
         trashInterval = 600;
     }
 }
-
-
 
 gameArea.addEventListener("click", e => {
     const x = e.pageX;
