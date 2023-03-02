@@ -19,9 +19,16 @@
                 </div>
                 <div class="scoreboard">
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">X</span>
-                    <ol style="font-family:'Verdana'; font-size: 35px; left: 450px; position: absolute; top: 150px;">
-                        <li th:each="highScores : ${scores}" th:text="${highScores.score} + '.........' + ${highScores.userName}"></li>
-                    </ol>
+                        <ol style="font-family:'Verdana'; font-size: 25px; left: 485px; position: absolute; top: 150px;">
+                            <li th:each="highScores : ${scores}" style="margin-bottom: 6px;" >
+                                <table>
+                                    <tr>
+                                        <th th:text="${highScores.userName}" style="width: 90px;"></th>
+                                        <th th:text="${highScores.score}"></th>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ol>
                 </div>
             </div>
             <div id="game-area" style="color: white; justify-content: center;">
