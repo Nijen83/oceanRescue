@@ -26,10 +26,11 @@ function startGame(){
     msgArea.classList.add("hidden");
     music.play();
 
+    updateScore();
+    levels();
     setInterval(addfishLeft, fishInterval);
     setInterval(addfishRight, fishInterval);
     setInterval(addTrash, trashInterval);
-    updateScore();
     changeBackground();
 }
 
@@ -143,15 +144,16 @@ function addTrash(){
         } else {
             score += 25;
         }
-        levels();
         updateScore();
         changeBackground();
+        levels();
     });
 }
 
 //......Displaying + updating score & health......
 function updateScore(){
     title.innerHTML = "<span>Score: " + score +  " </br><img src='images/life.png' style='height: 30px; width: 30px; right: 50px; position: absolute;'> " + healthCount + "</span>";
+    levels();
 }
 
 //......Playing + muting background music......
@@ -173,23 +175,21 @@ function endGame() {
 //......Updating trashInterval......
 function levels() {
     if(score >= 500){
-        trashInterval = 1800;
-        fishInterval = 2500;
-    }else
+        setInterval(addTrash, (trashInterval = 1000);
+    }
     if(score >= 1000){
-        trashInterval = 1500;
-        fishInterval = 2000;
-    }else
+        setInterval(addTrash, (trashInterval = 500);
+    }
     if(score >= 1500){
-        trashInterval = 1200;
-        fishInterval = 1500;
-    }else
+        setInterval(addTrash, (trashInterval = 200);
+        setInterval(addfishLeft, (fishInterval = 1000));
+        setInterval(addfishRight, (fishInterval = 1000));
+    }
     if(score >= 2000){
-        trashInterval = 900;
-        fishInterval = 1000;
-    }else
+        setInterval(addTrash, (trashInterval = 100);
+    }
     if(score >= 2500){
-        trashInterval = 600;
+        setInterval(addTrash, (trashInterval = 50);
     }
 }
 
