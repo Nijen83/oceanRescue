@@ -214,12 +214,14 @@ h2 {
     width: 130px;
     animation: right 30s normal;
 }
+
 .fish_9_r {
     background-image: url("images/fish/fish_9_r.gif");
     height: 70px;
     width: 70px;
     animation: right 40s normal;
 }
+
 .fish_10_r {
     background-image: url("images/fish/fish_10_r.gif");
     height: 50px;
@@ -233,12 +235,14 @@ h2 {
     width: 80px;
     animation: right 60s normal;
 }
+
 .fish_12_l {
     background-image: url("images/fish/fish_12_l.gif");
     height: 60px;
     width: 60px;
     animation: left 50s normal;
 }
+
 .fish_13_r {
     background-image: url("images/fish/fish_13_r.gif");
     height: 50px;
@@ -246,6 +250,7 @@ h2 {
     animation: left 50s normal;
     transform: scaleX(-1);
 }
+
 .fish_14_r {
     background-image: url("images/fish/fish_14_r.gif");
     height: 70px;
